@@ -1,7 +1,7 @@
 package maps
 
 //type valueSelector[TObject any, TResult any] = func(object TObject) TResult
-//type accumulate[TAccumulator any, TObject any] = func(accumulator TAccumulator, object TObject) TAccumulator
+type accumulate[TAccumulator any, TKey comparable, TValue any] = func(accumulator TAccumulator, key TKey, value TValue) TAccumulator
 
 type predicate[TKey comparable, TValue any] = func(key TKey, value TValue) bool
 
